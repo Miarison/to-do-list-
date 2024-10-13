@@ -1,50 +1,55 @@
-# Welcome to your Expo app 👋
+# to-do-list-
+## Fonctionnalités
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+- Ajouter des tâches
+- Lister les tâches 
+- Supprimer des tâches 
+- Gérer l'état des tâches
 
-1. Install dependencies
+## Prérequis
 
-   ```bash
-   npm install
-   ```
+- Node.js
+- Expo 
+- React Native
 
-2. Start the app
+## Installation
 
-   ```bash
-    npx expo start
-   ```
+ -Clonez le dépôt 
+ -Acceder au dossier du projet:  cd testRN
+ -Installer les dependances : npm install
+ -Demarrer le serveur :npx expo start
+ -Changer l'URL de l'API pour que l'application fonctionne. Si localhost ne fonctionne pas, essayez de mettre l'adresse IP.
 
-In the output, you'll find options to open the app in a
+## Utilisation
+ -Ouvrez l'application sur votre appareil ou émulateur.
+ -Tester les fonctionnalites :
+  vous pouvez ajouter, marquer comme complètes, trier par priorité , trier par alphabetique en ordre croissant et supprimer des tâches selon vos besoins.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+# Documentation
 
-## Get a fresh project
+### Structure du Projet
 
-When you're ready, run:
+- `app/index.tsx` : Le point d'entrée de l'application
+- `service/serviceTask.ts` : Gère les appels à l'API fictive.
+- `interface/Todo.ts` : Définitions des types TypeScript utilisés dans l'application.
+- `components/TodoTask.tsx` : Composants de l'interface utilisateur.
 
-```bash
-npm run reset-project
-```
+### Démarche
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1. **Conception de l'interface** : L'interface a été conçue pour offrir une expérience utilisateur fluide, tout en restant sur un seul écran.
+2.  **Design patern**: L' architecture est principalement fonctionnelle et basée sur des composants, intégrant certains éléments du pattern MVC. Cependant, elle ne constitue pas une implémentation complète du MVC
 
-## Learn more
+3. **Gestion de l'état** : L'application utilise le state management de React pour gérer l'état des tâches. Cela permet une mise à jour réactive de l'interface lors de l'ajout, de la suppression ou de la modification d'une tâche.
 
-To learn more about developing your project with Expo, look at the following resources:
+4. **API REST fictive** :L'application interagit avec une API REST fictive pour simuler les opérations CRUD, ce qui permet de tester les fonctionnalités sans nécessiter un backend réel. J'utilise JSON Server pour mettre en place le serveur de l'API.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+5. **Fonctionnalités de tri** : Les tâches peuvent être triées selon plusieurs critères. Cette fonctionnalité améliore l'expérience utilisateur en rendant la gestion des tâches plus organisée.
 
-## Join the community
 
-Join our community of developers creating universal apps.
+### Optimisations
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Utilisation de hooks pour une meilleure performance.
+- Implémentation de gestion des erreurs pour garantir une expérience utilisateur robuste.
+
